@@ -2,7 +2,9 @@
 基础服务统一配置工具
 
 具体用法：
+
 Example(以MySQL配置为例)：
+
 1. 如果基础服务配置路径：/home/www/conf
    则config目录下的config.inc.php中define('CONF_PATH', '/home/www/conf/');
    如果业务项目为B2C，则mysql配置为b2c.mysql.ini
