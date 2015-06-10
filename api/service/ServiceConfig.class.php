@@ -7,10 +7,6 @@ abstract class ServiceConfig extends BaseServiceConfig {
 	
 	public $file;
 	
-	public function __construct($service) {
-		
-	}
-	
 	public function setConfigKey($key) {
 		if($key) {
 			$this->file = $this->config_path.$this->service.'/'.$key.'.'.$this->service.'.ini';
