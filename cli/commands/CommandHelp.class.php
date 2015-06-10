@@ -3,8 +3,8 @@ namespace Configman\Cli\Commands;
 
 use Configman\Cli\Libs\Config;
 use Configman\Cli\Libs\Logger;
-use Configman\Cli\Libs\Compiler;
 use Configman\Cli\Libs\Bootstrap;
+use Configman\Cli\Libs\Compiler;
 
 /**
  * CommandHelp
@@ -19,8 +19,7 @@ class CommandHelp extends CommandAbstract {
      *
      * @return string
      */
-    public function getCommand()
-    {
+    public function getCommand() {
         return 'help';
     }
 
@@ -29,8 +28,7 @@ class CommandHelp extends CommandAbstract {
      *
      * @return string
      */
-    public function getUsage()
-    {
+    public function getUsage() {
         return 'help';
     }
 
@@ -39,8 +37,7 @@ class CommandHelp extends CommandAbstract {
      *
      * @return string
      */
-    public function getDescription()
-    {
+    public function getDescription() {
         return 'Displays this help';
     }
 
@@ -49,8 +46,7 @@ class CommandHelp extends CommandAbstract {
      * @param Config $config
      * @param Logger $logger
      */
-    public function execute(Config $config, Logger $logger)
-    {
+    public function execute(Config $config, Logger $logger) {
         echo self::LOGO, PHP_EOL;
         echo "ConfigTool version " , Compiler::VERSION,  PHP_EOL, PHP_EOL;
         echo "Usage: ", PHP_EOL;
@@ -61,11 +57,6 @@ class CommandHelp extends CommandAbstract {
             echo sprintf("\t%-20s%s\n", $command->getUsage(), $command->getDescription());
         }
         echo PHP_EOL;
-//         echo "Options:", PHP_EOL;
-//         echo sprintf("\t%-20s%s\n", "-f([a-z0-9\-]+)", "Enables compiler optimizations");
-//         echo sprintf("\t%-20s%s\n", "-fno-([a-z0-9\-]+)", "Disables compiler optimizations");
-//         echo sprintf("\t%-20s%s\n", "-w([a-z0-9\-]+)", "Turns a warning on");
-//         echo sprintf("\t%-20s%s\n", "-W([a-z0-9\-]+)", "Turns a warning off");
-//         echo PHP_EOL;
     }
+    
 }

@@ -34,6 +34,10 @@ abstract class ServiceConfig extends BaseServiceConfig {
 		return $config;
 	}
 	
+	public function show() {
+		return file($this->file);
+	}
+	
 	abstract public function parse($configure);
 	
 }

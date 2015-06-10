@@ -66,10 +66,6 @@ abstract class CommandAbstract implements CommandInterface {
      * @param Config $config
      * @param Logger $logger
      */
-    public function execute(Config $config, Logger $logger)
-    {
-        $compiler = new Compiler($config, $logger);
-        $command = $this->getCommand();
-        $compiler->$command($this);
-    }
+    abstract public function execute(Config $config, Logger $logger);
+    
 }
