@@ -34,12 +34,17 @@ Example(以MySQL配置为例)：
    ConfigTool version 0.0.1
 
    Usage: 
+	   
 	   command [options]
 
    Available commands:
+	   
 	   add                 Add config item
+	   
 	   help                Displays this help
+	   
 	   list                Show config list
+	   
 	   remove              Remove config item
 	   
    2. list命令：
