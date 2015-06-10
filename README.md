@@ -17,5 +17,7 @@ Example(以MySQL配置为例)：
    db=b2c host=127.0.0.1 port=3306 weight=1 user=b2c pass=123456 master=0//从库
 
 2. cd example
+
    增加db配置：php add_config.php
+   
    读取db配置：php get_config.php
