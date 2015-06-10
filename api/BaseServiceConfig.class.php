@@ -1,8 +1,7 @@
 <?php
 namespace Configman\Api;
 
-define('ROOT_PATH', __DIR__ . '/..');
-require('Autoloader.class.php');
+require('../Autoloader.class.php');
 
 abstract class BaseServiceConfig {
 	

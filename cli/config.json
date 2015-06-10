@@ -1,0 +1,8 @@
+{
+    "namespace": "test",
+    "name": "Test",
+    "description": "Description test for<br\/>Test",
+    "author": "Jobs Wang",
+    "version": "0.0.1",
+    "verbose": true
+}

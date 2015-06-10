@@ -1,6 +1,7 @@
 <?php
-namespace Configman\Api;
+namespace Configman;
 
+define('ROOT_PATH', __DIR__);
 $autoloader = Autoloader::register();
 
 class Autoloader {
