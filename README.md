@@ -31,21 +31,6 @@ Example(以MySQL配置为例)：
    
    ./configtool help
    
-   ConfigTool version 0.0.1
-
-   Usage: 
-   		command [options]
-
-   Available commands:
-	   
-	   add                 Add config item
-	   
-	   help                Displays this help
-	   
-	   list                Show config list
-	   
-	   remove              Remove config item
-	   
    2. list命令：
    
    ./configtool list --mysql=<业务项目mysql配置前缀>
