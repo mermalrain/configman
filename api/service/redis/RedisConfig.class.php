@@ -1,7 +1,7 @@
 <?php
-namespace Configman\Service\Redis;
+namespace Configman\Api\Service\Redis;
 
-use Configman\Service\ServiceConfig;
+use Configman\Api\Service\ServiceConfig;
 
 class RedisConfig extends ServiceConfig {
 	

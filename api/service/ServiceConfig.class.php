@@ -1,7 +1,7 @@
 <?php
-namespace Configman\Service;
+namespace Configman\Api\Service;
 
-use Configman\BaseServiceConfig;
+use Configman\Api\BaseServiceConfig;
 
 abstract class ServiceConfig extends BaseServiceConfig {
 	

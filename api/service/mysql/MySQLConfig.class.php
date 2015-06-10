@@ -1,7 +1,7 @@
 <?php
-namespace Configman\Service\Mysql;
+namespace Configman\Api\Service\Mysql;
 
-use Configman\Service\ServiceConfig;
+use Configman\Api\Service\ServiceConfig;
 
 class MySQLConfig extends ServiceConfig {
 	

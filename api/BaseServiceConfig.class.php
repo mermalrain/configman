@@ -1,5 +1,5 @@
 <?php
-namespace Configman;
+namespace Configman\Api;
 
 abstract class BaseServiceConfig {
 	
@@ -27,7 +27,7 @@ abstract class BaseServiceConfig {
 	}
 	
 	public static function getService($service, $type = 1) {
-		$service_class = '\\\Configman\\Configure\\'.ucfirst($service).'\\'.self::$class_mapping[$service][$type];
+		$service_class = '\\Configman\\Api\\Serivce\\'.ucfirst($service).'\\'.self::$class_mapping[$service][$type];
 		
 		return new $service_class($service);
 	} 
