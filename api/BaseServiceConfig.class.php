@@ -1,7 +1,7 @@
 <?php
 namespace Configman\Api;
 
-require('../Autoloader.class.php');
+require_once('../Autoloader.class.php');
 
 abstract class BaseServiceConfig {
 	

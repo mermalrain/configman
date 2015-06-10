@@ -4,6 +4,7 @@ namespace Configman\Cli\Commands;
 use Configman\Cli\Libs\Config;
 use Configman\Cli\Libs\Logger;
 use Configman\Cli\Libs\Bootstrap;
+use Configman\Api\BaseServiceConfig;
 
 /**
  * CommandList
@@ -45,7 +46,17 @@ class CommandList extends CommandAbstract {
      * @param Logger $logger
      */
     public function execute(Config $config, Logger $logger) {
+    	$args = $this->parseArguments();
     	
+    	$param_arr = array_keys($args);
+    	$param = $param_arr[0];
+    	
+    	if($param == 'mysql') {
+    		$list = BaseServiceConfig::getService('mysql')->setConfigKey($args['mysql'])->show();
+    		foreach($list as $item) {
+    			echo $item;
+    		}
+    	}
     }
     
 }
