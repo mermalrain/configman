@@ -1,7 +1,7 @@
 # configman
 基础服务统一配置工具，目前支持Redis，Memcache，MySQL和RabbitMQ
 
-具体用法：
+一、Api使用方法
 
 Example(以MySQL配置为例)：
 
@@ -22,3 +22,29 @@ Example(以MySQL配置为例)：
    增加db配置：php add_config.php
    
    读取db配置：php get_config.php
+   
+二、命令行使用方法
+
+   cd bin
+   
+   help命令：
+   
+   ./configtool help
+   
+   ConfigTool version 0.0.1
+
+   Usage: 
+	   command [options]
+
+   Available commands:
+	   add                 Add config item
+	   help                Displays this help
+	   list                Show config list
+	   remove              Remove config item
+	   
+   list命令：
+   
+   ./configtool list --mysql=<业务项目mysql配置前缀>
+
+   db=b2c host=127.0.0.1 port=3306 weight=1 user=b2c pass=123456 master=1
+   db=b2c host=127.0.0.1 port=3306 weight=1 user=b2c pass=123456 master=0
