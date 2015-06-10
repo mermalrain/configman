@@ -42,9 +42,10 @@ Example(以MySQL配置为例)：
 	   list                Show config list
 	   remove              Remove config item
 	   
-   list命令：
+   2. list命令：
    
    ./configtool list --mysql=<业务项目mysql配置前缀>
 
    db=b2c host=127.0.0.1 port=3306 weight=1 user=b2c pass=123456 master=1
+   
    db=b2c host=127.0.0.1 port=3306 weight=1 user=b2c pass=123456 master=0
