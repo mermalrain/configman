@@ -1,5 +1,5 @@
 # configman
-基础服务统一配置工具
+基础服务统一配置工具，目前支持redis，memcache，mysql，rabbitmq
 
 具体用法：
 
