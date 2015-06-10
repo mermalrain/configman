@@ -27,7 +27,7 @@ Example(以MySQL配置为例)：
 
    cd bin
    
-   help命令：
+   1. help命令：
    
    ./configtool help
    
