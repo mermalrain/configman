@@ -18,6 +18,12 @@ abstract class BaseServiceConfig {
 		),
 		'redis' => array(
 			1 => 'RedisConfig'
+		),
+		'memcache' => array(
+			1 => 'MemcacheConfig'
+		),
+		'rabbitmq' => array(
+			1 => 'RabbitmqConfig'
 		)
 	);
 	
