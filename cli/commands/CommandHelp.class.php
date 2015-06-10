@@ -11,8 +11,7 @@ use Configman\Cli\Libs\Bootstrap;
  *
  * Shows compiler help
  */
-class CommandHelp extends CommandAbstract
-{
+class CommandHelp extends CommandAbstract {
     const LOGO ='';
 
     /**

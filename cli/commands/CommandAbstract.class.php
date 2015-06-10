@@ -11,8 +11,7 @@ use Configman\Cli\Libs\Compiler;
  *
  * Provides a superclass for commands
  */
-abstract class CommandAbstract implements CommandInterface
-{
+abstract class CommandAbstract implements CommandInterface {
     private $_parameters = null;
 
     /**

@@ -8,8 +8,7 @@ use Configman\Cli\Commands\CommandAbstract;
  *
  * Main compiler bootstrap
  */
-class Bootstrap
-{
+class Bootstrap {
     /**
      * @var CommandAbstract[]
      */

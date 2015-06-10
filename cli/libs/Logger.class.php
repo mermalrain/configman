@@ -6,8 +6,7 @@ namespace Configman\Cli\Libs;
  *
  * Entrypoint for warnings/notices/errors generated in compilation
  */
-class Logger
-{
+class Logger {
     private static $files = array();
 
     /**
