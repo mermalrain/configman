@@ -9,10 +9,10 @@ class MemcacheConfig extends ServiceConfig {
 		$rs_config = array();
 		
 		foreach($configure as $config) {
-			$redis_config = explode(' ', $config);
+			$memcache_config = explode(' ', $config);
 			
-			$host = explode('=', $redis_config[0]);
-			$port = explode('=', $redis_config[1]);
+			$host = explode('=', $memcache_config[0]);
+			$port = explode('=', $memcache_config[1]);
 
 			$rs_config[] = array($host[1], $port[1]);
 		}
