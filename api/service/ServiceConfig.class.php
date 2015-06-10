@@ -17,8 +17,14 @@ abstract class ServiceConfig extends BaseServiceConfig {
 		return $this;
 	}
 	
-	public function write() {
-		
+	public function add($config) {
+		$config_arr = array();
+	
+		foreach($config as $k => $item) {
+			$config_arr[] = $k.'='.$item;
+		}
+	
+		file_put_contents($this->file, implode(' ', $config_arr)."\r\n", FILE_APPEND);
 	}
 	
 	public function read() {

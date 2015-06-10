@@ -1,9 +1,9 @@
 <?php
-namespace Configman\Api\Service\Redis;
+namespace Configman\Api\Service\Memcache;
 
 use Configman\Api\Service\ServiceConfig;
 
-class RedisConfig extends ServiceConfig {
+class MemcacheConfig extends ServiceConfig {
 	
 	public function parse($configure) {
 		$rs_config = array();
