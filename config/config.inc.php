@@ -1,2 +1,2 @@
 <?php
-define('CONF_PATH', $value);
+define('CONF_PATH', '/Library/WebServer/Documents/conf/');

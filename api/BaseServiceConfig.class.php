@@ -1,6 +1,9 @@
 <?php
 namespace Configman\Api;
 
+define('ROOT_PATH', __DIR__ . '/..');
+require('Autoloader.class.php');
+
 abstract class BaseServiceConfig {
 	
 	public $service;
@@ -19,7 +22,7 @@ abstract class BaseServiceConfig {
 	);
 	
 	public function __construct($service, $type = 1) {
-		require('config/config.inc.php');
+		require('../config/config.inc.php');
 		
 		$this->service = $service;
 		$this->return_type = $type;
@@ -27,7 +30,7 @@ abstract class BaseServiceConfig {
 	}
 	
 	public static function getService($service, $type = 1) {
-		$service_class = '\\Configman\\Api\\Serivce\\'.ucfirst($service).'\\'.self::$class_mapping[$service][$type];
+		$service_class = '\\Configman\\Api\\Service\\'.ucfirst($service).'\\'.self::$class_mapping[$service][$type];
 		
 		return new $service_class($service);
 	} 
