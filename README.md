@@ -14,6 +14,7 @@ Example(以MySQL配置为例)：
    内容为
    
    db=b2c host=127.0.0.1 port=3306 weight=1 user=b2c pass=123456 master=1//主库
+   
    db=b2c host=127.0.0.1 port=3306 weight=1 user=b2c pass=123456 master=0//从库
 
 2. cd example
