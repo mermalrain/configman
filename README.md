@@ -34,7 +34,7 @@ Example(以MySQL配置为例)：
    ConfigTool version 0.0.1
 
    Usage: 
-   	command [options]
+   		command [options]
 
    Available commands:
 	   
