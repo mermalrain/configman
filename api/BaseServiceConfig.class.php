@@ -2,7 +2,7 @@
 namespace Configman\Api;
 
 define(ROOT_PATH, __DIR__ . '/..');
-require_once(ROOT_PATH . '/Autoloader.class.php');
+require_once(ROOT_PATH . '/configman.php');
 
 abstract class BaseServiceConfig {
 	
