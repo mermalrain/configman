@@ -5,11 +5,6 @@ use Configman\Cli\Libs\Config;
 use Configman\Cli\Libs\Logger;
 use Configman\Cli\Libs\Bootstrap;
 
-/**
- * CommandList
- *
- * Shows compiler list
- */
 class CommandAdd extends CommandAbstract {
 
     /**

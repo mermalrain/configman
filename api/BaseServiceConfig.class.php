@@ -1,12 +1,13 @@
 <?php
 namespace Configman\Api;
 
-require_once('../Autoloader.class.php');
+define(ROOT_PATH, __DIR__ . '/..');
+require_once(ROOT_PATH . '/Autoloader.class.php');
 
 abstract class BaseServiceConfig {
 	
 	public $service;
-	public $return_type = 1; //1: 成员变量 2: 常量
+	public $return_type = 1; //1: 数组 2: 常量
 	
 	public $config_path;
 	
@@ -27,7 +28,7 @@ abstract class BaseServiceConfig {
 	);
 	
 	public function __construct($service, $type = 1) {
-		require('../config/config.inc.php');
+		require(ROOT_PATH . '/config/config.inc.php');
 		
 		$this->service = $service;
 		$this->return_type = $type;

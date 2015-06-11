@@ -4,8 +4,9 @@ namespace Configman\Cli\Commands;
 use Configman\Cli\Libs\Config;
 use Configman\Cli\Libs\Logger;
 use Configman\Cli\Libs\Bootstrap;
+use Configman\Api\BaseServiceConfig;
 
-class CommandRemove extends CommandAbstract {
+class CommandPush extends CommandAbstract {
 
     /**
      * Command provided by this command
@@ -13,7 +14,7 @@ class CommandRemove extends CommandAbstract {
      * @return string
      */
     public function getCommand() {
-        return 'remove';
+        return 'push';
     }
 
     /**
@@ -22,7 +23,7 @@ class CommandRemove extends CommandAbstract {
      * @return string
      */
     public function getUsage() {
-        return 'remove';
+        return 'push';
     }
 
     /**
@@ -31,7 +32,7 @@ class CommandRemove extends CommandAbstract {
      * @return string
      */
     public function getDescription() {
-        return 'Remove config item';
+        return 'Push config to servers';
     }
 
     /**
@@ -40,7 +41,17 @@ class CommandRemove extends CommandAbstract {
      * @param Logger $logger
      */
     public function execute(Config $config, Logger $logger) {
+    	$args = $this->parseArguments();
     	
+    	$param_arr = array_keys($args);
+    	$param = $param_arr[0];
+    	
+    	if($param == 'mysql') {
+    		$list = BaseServiceConfig::getService('mysql')->setConfigKey($args['mysql'])->show();
+    		foreach($list as $item) {
+    			echo $item;
+    		}
+    	}
     }
     
 }
