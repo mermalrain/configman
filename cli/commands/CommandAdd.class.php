@@ -40,7 +40,15 @@ class CommandAdd extends CommandAbstract {
      * @param Logger $logger
      */
     public function execute(Config $config, Logger $logger) {
-    	
+    	$args = $this->parseArguments();
+
+    	$param_arr = array_keys($args);
+    	$param = $param_arr[0];
+    	 
+    	$class_name ='\\Configman\\Cli\\Commands\\Commandsadd\\Command'.ucfirst($param).'Add';
+    	$class = new $class_name();
+
+    	$class->execute($args);
     }
     
 }

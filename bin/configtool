@@ -2,28 +2,4 @@
 
 CONFIG_TOOL_DIR="/Users/MLA/GitHub/configman/cli"
 
-if [ -z "$CONFIG_TOOL_DIR" ]; then
-  CONFIG_TOOL_DIR="%CONFIG_TOOL_DIR%"
-  if [[ "$CONFIG_TOOL_DIR" == "%""CONFIG_TOOL_DIR""%" ]]; then
-    if [ -h $0 ]; then
-        REALPATH="`dirname $0`/`readlink $0`"
-        CURDIR=`dirname $REALPATH`
-    else
-        CURDIR=`dirname $0`
-    fi
-    PARENTDIR=`cd $CURDIR/..; pwd`
-
-    if [ -f $PARENTDIR/compiler.php ]; then
-      export CONFIG_TOOL_DIR=$PARENTDIR
-    else
-      echo "Environment variable CONFIG_TOOL_DIR is not set"
-      exit 1
-    fi
-  fi
-fi
-
-if [[ $1 && $2 && $3 && "$1"=="-c" ]]; then
-    php -c $2 $CONFIG_TOOL_DIR/compiler.php ${*:3}
-else
-    php $CONFIG_TOOL_DIR/compiler.php $*
-fi
+php $CONFIG_TOOL_DIR/compiler.php $*

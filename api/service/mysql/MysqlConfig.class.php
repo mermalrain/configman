@@ -3,7 +3,7 @@ namespace Configman\Api\Service\Mysql;
 
 use Configman\Api\Service\ServiceConfig;
 
-class MySQLConfig extends ServiceConfig {
+class MysqlConfig extends ServiceConfig {
 	
 	public function parse($configure) {
 		$rs_config = array();

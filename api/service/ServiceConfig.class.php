@@ -23,8 +23,12 @@ abstract class ServiceConfig extends BaseServiceConfig {
 		foreach($config as $k => $item) {
 			$config_arr[] = $k.'='.$item;
 		}
-	
+
 		file_put_contents($this->file, implode(' ', $config_arr)."\r\n", FILE_APPEND);
+	}
+	
+	public function addLine($line) {
+		file_put_contents($this->file, $line."\r\n", FILE_APPEND);
 	}
 	
 	public function read() {

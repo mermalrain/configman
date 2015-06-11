@@ -46,8 +46,8 @@ class CommandPush extends CommandAbstract {
     	$param_arr = array_keys($args);
     	$param = $param_arr[0];
     	
-    	if($param == 'mysql') {
-    		$list = BaseServiceConfig::getService('mysql')->setConfigKey($args['mysql'])->show();
+    	if($param == 'app') {
+    		$list = BaseServiceConfig::getService('server')->setConfigKey($args['server'])->show();
     		foreach($list as $item) {
     			echo $item;
     		}
