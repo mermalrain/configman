@@ -11,7 +11,7 @@ use Configman\Cli\FileSystem\HardDisk as FileSystem;
  * Main compiler
  */
 class Compiler {
-    const VERSION = '0.0.1';
+    const VERSION = '0.0.1a';
 
     /**
      * @var CompilerFile[]
